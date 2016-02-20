@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+#!/usr/bin/python
 """
 Created on Sat Feb 20 20:02:08 2016
 Logistic Regression

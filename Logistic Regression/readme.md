@@ -97,3 +97,9 @@ classify error.
 classify error.
 error rate is: 0.2836
 ```
+
+
+# 参考资料
+
+- 机器学习实战
+- Andrew Ng 机器学习公开课
