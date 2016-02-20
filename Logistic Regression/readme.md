@@ -8,7 +8,7 @@
 - 测试集：./data/test.txt
 
 # Result
-
+```
 1-th sample  1 is classfied as: 1
 2-th sample  1 is classfied as: 1
 3-th sample  1 is classfied as: 1
@@ -96,3 +96,4 @@ classify error.
 67-th sample  0 is classfied as: 1
 classify error.
 error rate is: 0.2836
+```
