@@ -25,7 +25,7 @@ def sigmoid(fx):
     return 1.0/(1+np.exp(-fx))
 
 #alpha为步长（学习率）；maxCycles最大迭代次数
-def gradAscent(featData, labelData, alpha, maxCycles):
+def gradDescent(featData, labelData, alpha, maxCycles):
     dataMat = np.mat(featData)                      #size: m*n
     labelMat = np.mat(labelData).transpose()        #size: m*1
     m, n = np.shape(dataMat)
@@ -35,6 +35,10 @@ def gradAscent(featData, labelData, alpha, maxCycles):
         error = labelMat - hx       #size:m*1
         weigh = weigh + alpha * dataMat.transpose() * error#根据误差修改回归系数
     return weigh
+
+#使用梯度下降方法训练模型，如果使用其它的寻参方法，此处可以做相应修改
+def trainLogRegres(train_x, train_y, alpha=0.01, maxCycles=100):
+    return gradDescent(train_x, train_y, alpha, maxCycles)
 
 #使用学习得到的参数进行分类
 def classify(testfile, weigh):
@@ -64,5 +68,5 @@ if __name__=="__main__":
     trainfile=r"data\train.txt"
     testfile=r"data\test.txt"
     trainSet, trainLabel = loadDataSet(trainfile)
-    weigh = gradAscent(trainSet, trainLabel, alpha=0.01, maxCycles=500)
+    weigh = trainLogRegres(trainSet, trainLabel, alpha=0.01, maxCycles=500)
     classify(testfile, weigh)
