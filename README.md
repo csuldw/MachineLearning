@@ -8,4 +8,4 @@
 
 # Contributor
 
-- liudiwei, [Homepage](http://csuldw.github.io)
+- liudiwei, [HOME](http://csuldw.github.io)
