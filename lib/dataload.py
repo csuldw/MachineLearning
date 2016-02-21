@@ -25,7 +25,8 @@ def loadData(datafile):
             oneline = eachline.split('\t')
             tempArr = []
             for i in range(len(oneline)-1):
-                tempArr.append(float(oneline[i]))
+                value = int(float("%.2f" %float(oneline[i])))
+                tempArr.append(value)
             featData.append(tempArr)
             labelDate.append(int(float(oneline[-1].strip())))
     return featData, labelDate   #返回的数据是list
