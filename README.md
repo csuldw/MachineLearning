@@ -10,6 +10,7 @@
 
 - Naive Bayes：朴素贝叶斯[源码实现](https://github.com/csuldw/MachineLearning/tree/master/NaiveBayes).
 
+- K-NearestNeighbor：K最近邻算法[源码实现](https://github.com/csuldw/MachineLearning/tree/master/KNN).
 
   
 ## Contributor
