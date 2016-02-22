@@ -8,9 +8,9 @@ import os
 import numpy as np
 
 class DecitionTree():
-    """this is a decision tree classifier. """
+    """This is a decision tree classifier. """
     
-    def __init__(self, criteria='C4.5'):
+    def __init__(self, criteria='ID3'):
         self._tree = None
         if criteria == 'ID3' or criteria == 'C4.5':
             self._criteria = criteria
@@ -19,9 +19,9 @@ class DecitionTree():
     
     def _calEntropy(slef, y):
         '''
-        _calEntropy用于计算香农熵 e=-sum(pi*log pi)
-        其中y为数组array
-        输出entropy
+        功能：_calEntropy用于计算香农熵 e=-sum(pi*log pi)
+        参数：其中y为数组array
+        输出：信息熵entropy
         '''
         n = y.shape[0]  
         labelCounts = {}
@@ -38,7 +38,8 @@ class DecitionTree():
     
     def _splitData(self, X, y, axis, cutoff):
         """
-        该函数返回数据集中特征下标为axis，特征值等于cutoff的子数据集
+        参数：X为特征,y为label,axis为某个特征的下标,cutoff是下标为axis特征取值值
+        输出：返回数据集中特征下标为axis，特征值等于cutoff的子数据集
         """
         ret = []
         featVec = X[:,axis]
@@ -51,7 +52,9 @@ class DecitionTree():
             
     def _chooseBestSplit(self, X, y):
         """ID3 & C4.5
-        根据信息增益或者信息增益率来获取最好的划分特征
+        参数：X为特征，y为label
+        功能：根据信息增益或者信息增益率来获取最好的划分特征
+        输出：返回最好划分特征的下标
         """
         numFeat = X.shape[1]
         baseEntropy = self._calEntropy(y)
@@ -83,17 +86,23 @@ class DecitionTree():
         
     def _majorityCnt(self, labellist):
         """
-        返回labellist中出现次数最多的label
+        参数:labellist是类标签，序列类型为list
+        输出：返回labellist中出现次数最多的label
         """
         labelCount={}
         for vote in labellist:
-            if vote not in labelCount.keys(): labelCount[vote] = 0
+            if vote not in labelCount.keys(): 
+                labelCount[vote] = 0
             labelCount[vote] += 1
         sortedClassCount = sorted(labelCount.iteritems(), key=lambda x:x[1], \
                                      reverse=True)
         return sortedClassCount[0][0]
 
     def _createTree(self, X, y, featureIndex):
+        """
+        参数:X为特征,y为label,featureIndex类型是元组，记录X特征在原始数据中的下标
+        输出:根据当前的featureIndex创建一颗完整的树
+        """
         labelList = list(y)
         if labelList.count(labelList[0]) == len(labelList): 
             return labelList[0]
@@ -110,12 +119,16 @@ class DecitionTree():
         for value in uniqueVals:
             #对每个value递归地创建树
             sub_X, sub_y = self._splitData(X,y, bestFeatIndex, value)
-            myTree[bestFeatAxis][value] = self._createTree(sub_X,sub_y,\
+            myTree[bestFeatAxis][value] = self._createTree(sub_X, sub_y, \
                                             featureIndex)
         return myTree  
         
     def fit(self, X, y):
-        #对数据X和y进行类型检测，保证其为array
+        """
+        参数：X是特征，y是类标签
+        注意事项：对数据X和y进行类型检测，保证其为array
+        输出：self本身
+        """
         if isinstance(X, np.ndarray) and isinstance(y, np.ndarray):
             pass
         else:
@@ -129,19 +142,26 @@ class DecitionTree():
         return self  #allow using: clf.fit().predict()
         
     def _classify(self, tree, sample):
-        featIndex = tree.keys()[0]
-        secondDict = tree[featIndex]
-        key = sample[int(featIndex[1:])]
-        valueOfkey = secondDict[key]
-        if type(valueOfkey).__name__=='dict':
-            return self._classify(valueOfkey, sample)
+        """
+        用训练好的模型对输入数据进行分类 
+        注意：决策树的构建是一个递归的过程，用决策树分类也是一个递归的过程
+        _classify()一次只能对一个样本（sample）分类
+        """
+        featIndex = tree.keys()[0] #得到数的根节点值
+        secondDict = tree[featIndex] #得到以featIndex为划分特征的结果
+        axis=featIndex[1:] #得到根节点特征在原始数据中的下标
+        key = sample[int(axis)] #获取待分类样本中下标为axis的值
+        valueOfKey = secondDict[key] #获取secondDict中keys为key的value值
+        if type(valueOfKey).__name__=='dict': #如果value为dict，则继续递归分类
+            return self._classify(valueOfKey, sample)
         else: 
-            return valueOfkey
+            return valueOfKey
         
     def predict(self, X):
         if self._tree==None:
             raise NotImplementedError("Estimator not fitted, call `fit` first")
-        if isinstance(X,np.ndarray): 
+        #对X的类型进行检测，判断其是否是数组
+        if isinstance(X, np.ndarray): 
             pass
         else: 
             try:
@@ -149,21 +169,22 @@ class DecitionTree():
             except:
                 raise TypeError("numpy.ndarray required for X")
             
-        if len(X.shape)==1:
+        if len(X.shape) == 1:
             return self._classify(self._tree, X)
         else:
             result = []
             for i in range(X.shape[0]):
-                result.append(self._classify(self._tree, X[i]))
+                value = self._classify(self._tree, X[i])
+                print str(i+1)+"-th sample is classfied as:", value 
+                result.append(value)
             return np.array(result)
 
-    def show(self):
+    def show(self, outpdf):
         if self._tree==None:
             pass
         #plot the tree using matplotlib
         import treePlotter
-        treePlotter.createPlot(self._tree)
-        
+        treePlotter.createPlot(self._tree, outpdf)
     
 if __name__=="__main__":
     trainfile=r"data\train.txt"
@@ -173,8 +194,10 @@ if __name__=="__main__":
     import dataload as dload
     train_x, train_y = dload.loadData(trainfile)
     test_x, test_y = dload.loadData(testfile)
-    clf = DecitionTree()
+    
+    clf = DecitionTree(criteria="C4.5")
     clf.fit(train_x, train_y)
     result = clf.predict(test_x)    
-    clf.show()
+    outpdf = r"tree.pdf"
+    clf.show(outpdf)
     

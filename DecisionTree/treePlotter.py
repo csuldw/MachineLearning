@@ -4,6 +4,7 @@ Created on Oct 14, 2010
 @author: Peter Harrington
 '''
 import matplotlib.pyplot as plt
+from matplotlib.pyplot import savefig
 
 decisionNode = dict(boxstyle="sawtooth", fc="0.8")
 leafNode = dict(boxstyle="round4", fc="0.8")
@@ -59,7 +60,7 @@ def plotTree(myTree, parentPt, nodeTxt):#if the first key tells you what feat wa
     plotTree.yOff = plotTree.yOff + 1.0/plotTree.totalD
 #if you do get a dictonary you know it's a tree, and the first element will be another dict
 
-def createPlot(inTree):
+def createPlot(inTree, outpdf):
     fig = plt.figure(1, facecolor='white')
     fig.clf()
     axprops = dict(xticks=[], yticks=[])
@@ -69,6 +70,7 @@ def createPlot(inTree):
     plotTree.totalD = float(getTreeDepth(inTree))
     plotTree.xOff = -0.5/plotTree.totalW; plotTree.yOff = 1.0;
     plotTree(inTree, (0.5,1.0), '')
+    plt.savefig(outpdf)
     plt.show()
 
 #def createPlot():
