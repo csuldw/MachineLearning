@@ -20,6 +20,7 @@ class NaiveBayes:
             vocabSet = vocabSet | set(line)
         return list(vocabSet)
         
+    #文档词集模型
     def _setOfWords2Vec(self, vocabList, inputSet):
         """
         功能:根据给定的一行词，将每个词映射到此库向量中，出现则标记为1，不出现则为0
@@ -33,7 +34,7 @@ class NaiveBayes:
         return outputVec
     
         
-    # 修改 _setOfWordsVec
+    # 修改 _setOfWordsVec  文档词袋模型
     def _bagOfWords2VecMN(self, vocabList, inputSet):
         """
         功能：对每行词使用第二种统计策略，统计单个词的个数，然后映射到此库中
@@ -42,7 +43,7 @@ class NaiveBayes:
         returnVec = [0]*len(vocabList)
         for word in inputSet:
             if word in vocabList:
-                returnVec[vocabList.index(word)] += 1 # 更新
+                returnVec[vocabList.index(word)] += 1 # 更新此处代码
         return returnVec
     
     
@@ -61,7 +62,7 @@ class NaiveBayes:
         p0InAll = 2.0 #词库中只有两类，所以此处初始化为2(use laplace)
         p1InAll = 2.0 
         
-        # calculate the number of pos and neg in single sample and in total matrix
+        # 再单个文档和整个词库中更新正负样本数据
         for i in range(numTrainDocs):
             if trainLabel[i] == 1:
                 p1Num += trainMatrix[i]
@@ -70,18 +71,19 @@ class NaiveBayes:
                 p0Num += trainMatrix[i]
                 p0InAll += sum(trainMatrix[i])
         
-        #计算给定类别的条件下，词汇表中单词出现的概率，然后取log对数
+        #计算给定类别的条件下，词汇表中单词出现的概率
+        #然后取log对数，解决条件概率乘积下溢
         p0Vect = np.log(p0Num/p0InAll) #计算类标签为0时的其它属性发生的条件概率
         p1Vect = np.log(p1Num/p1InAll)  #log函数默认以e为底  #p(ci|w=0)
         return p0Vect, p1Vect, pNeg
         
-    def _classifyNB(self, vecSample, p0Vec, p1Vec,pNeg):
+    def _classifyNB(self, vecSample, p0Vec, p1Vec, pNeg):
         """
         使用朴素贝叶斯进行分类,返回结果为0/1
         """
-        p0 = sum(vecSample * p0Vec) + np.log(1-pNeg)
-        p1 = sum(vecSample * p1Vec) + np.log(pNeg) #log是以e为底
-        if p0 < p1:
+        prob_y0 = sum(vecSample * p0Vec) + np.log(1-pNeg)
+        prob_y1 = sum(vecSample * p1Vec) + np.log(pNeg) #log是以e为底
+        if prob_y0 < prob_y1:
             return 1
         else:
             return 0
@@ -114,9 +116,9 @@ def loadDataSet():
         
 if __name__=="__main__":    
     clf = NaiveBayes()
-    testEntry = [['love', 'my', 'dalmation'],
+    testEntry = [['love', 'my', 'girl', 'friend'],
                  ['stupid', 'garbage'],
-                 ['Haha', 'I', "Love", "You"],
+                 ['Haha', 'I', 'really', "Love", "You"],
                  ['This', 'is', "my", "dog"]]
     for item in testEntry:
         clf.testingNB(item)
