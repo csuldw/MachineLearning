@@ -78,12 +78,12 @@ if __name__=="__main__":
 
 - 当k=3时的结果
 
-![](./result/n_clusters3.png)
+![](./result/k_clusters3.png)
 
 - 当k=4时的结果
 
-![](./result/n_clusters4.png)
+![](./result/k_clusters4.png)
 
 - 当k=5时的结果
 
-![](./result/n_clusters5.png)
+![](./result/k_clusters5.png)
