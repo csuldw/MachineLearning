@@ -6,7 +6,7 @@
 
 ## 实例
 
-手写识别字 [HandWriting.py](https://github.com/csuldw/MachineLearning/HandWriting.py)
+手写识别字 [HandWriting.py](https://github.com/csuldw/MachineLearning/KNN/HandWriting.py)
 
 ## Data:
 
