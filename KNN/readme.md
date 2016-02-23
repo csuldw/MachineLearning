@@ -2,11 +2,11 @@
 
 参考博文：[机器学习算法-K最近邻从原理到实现](http://www.csuldw.com/2015/05/21/2015-05-21-KNN/)
 
-- 实现：python+numpy   [KNN.py](https://github.com/csuldw/MachineLearning/KNN/KNN.py)
+- 实现：python+numpy   [KNN.py](https://github.com/csuldw/MachineLearning/blob/master/KNN/KNN.py)
 
 ## 实例
 
-手写识别字 [HandWriting.py](https://github.com/csuldw/MachineLearning/KNN/HandWriting.py)
+手写识别字 [HandWriting.py](https://github.com/csuldw/MachineLearning/blob/master/KNN/HandWriting.py)
 
 ## Data:
 

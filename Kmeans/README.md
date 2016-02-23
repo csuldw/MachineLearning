@@ -78,12 +78,18 @@ K-means算法结果如下图所示：
 
 - 当k=3时的结果
 
+<center>
 ![](./result/k_clusters3.png)
+</center>
 
 - 当k=4时的结果
 
+<center>
 ![](./result/k_clusters4.png)
+</center>
 
 - 当k=5时的结果
 
+<center>
 ![](./result/k_clusters5.png)
+</center>
