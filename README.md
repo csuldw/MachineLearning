@@ -12,7 +12,8 @@
 
 - K-NearestNeighbor：K最近邻算法[源码实现](https://github.com/csuldw/MachineLearning/tree/master/KNN).
 
-  
+- K-Means均值聚类：[源码实现](https://github.com/csuldw/MachineLearning/tree/master/Kmeans)
+
 ## Contributor
 
 - liudiwei, [HOME](http://csuldw.github.io)
