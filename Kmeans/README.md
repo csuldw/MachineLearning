@@ -1,6 +1,5 @@
 
-## Kmeans聚类
-
+## Kmeans聚类（Python实现）
 
 目录说明：
 
@@ -12,12 +11,11 @@
 
 参考博文：[机器学习算法-K-means聚类](http://www.csuldw.com/2015/06/03/2015-06-03-K-means/)
 
-scikit-learn链接：[k-means](http://scikit-learn.org/stable/modules/clustering.html#k-means)
+使用工具：python + numpy + matplotlib + pandas
 
-- python, numpy, matplotlib, pandas
+scikit-learn链接：[#k-means](http://scikit-learn.org/stable/modules/clustering.html#k-means)
 
 
-Kmeans算法和Kmeas++算法比较结果如上图所示：
 ## K-means原理
 1. 创建k个点作为k个簇的起始质心（经常随机选择）。
 - 分别计算剩下的元素到k个簇中心的相异度（距离），将这些元素分别划归到相异度最低的簇。
@@ -75,6 +73,8 @@ if __name__=="__main__":
 ```
 
 ## 结果展示
+
+K-means算法结果如下图所示：
 
 - 当k=3时的结果
 
