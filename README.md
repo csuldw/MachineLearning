@@ -18,7 +18,7 @@
 
 - K-Means均值聚类：[源码实现](https://github.com/csuldw/MachineLearning/tree/master/Kmeans).
 
-
+- Adaboost组合算法：[源码链接](https://github.com/csuldw/MachineLearning/tree/master/Adaboost)
 
 ## Contributor
 

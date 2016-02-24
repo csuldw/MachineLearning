@@ -50,9 +50,12 @@ def handwritingClassTest(train_X, train_y, test_X, test_y):
     print error_rate
     return error_rate
 
-if __name__=="__main__":
+def main():
     traindir = "data/trainingDigits"
     testdir = "data/testDigits"
     train_X, train_y = loadDataset(traindir)
     test_X, test_y = loadDataset(testdir)
-    #error_rate = handwritingClassTest(train_X, train_y, test_X, test_y)
+    handwritingClassTest(train_X, train_y, test_X, test_y)
+
+if __name__=="__main__":
+    main()

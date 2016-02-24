@@ -2,10 +2,12 @@
 
 逻辑回归详解：https://en.wikipedia.org/wiki/Logistic_function
 
-# dataset
+# 目录
 
 - 训练集：./data/train.txt
 - 测试集：./data/test.txt
+- logistic_regression.py:逻辑回归模型
+- test.py：模型测试实例
 
 # Result
 ```
