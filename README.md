@@ -25,7 +25,7 @@
 - 刘帝伟, 中南大学在读硕士，[HOME](http://csuldw.github.io).
 
 
-## 联系方式
+## Contact
 
 - QQ: 466454368
 - E-mail: csu.ldw@csu.edu.cn

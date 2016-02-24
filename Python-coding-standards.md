@@ -24,18 +24,17 @@ color = WHITE
 this_is_a_variable = 1
 ```
 
-
-PS:保护变量
-
-
 ## 函数和方法
+
 - 私有方法 ： 小写和一个前导下划线
 
 ```python
 def _secrete(self):
     print "don't test me."
 ``` 
+
 - 函数参数 : 小写和下划线，缺省值等号两边无空格
+
 
 ```python
 def connect(self, user=None):
@@ -49,7 +48,7 @@ def connect(self, user=None):
 
 ```python
 class SQLEngine(object):
-	pass
+    pass
 ```
 
 - 对于基类而言，可以使用一个 Base 或者 Abstract 前缀
@@ -57,7 +56,6 @@ class SQLEngine(object):
 ```python
 class BaseCookie(object):
 	pass
-
 class AbstractGroup(object):
 	psss
 ```
