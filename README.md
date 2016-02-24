@@ -20,6 +20,8 @@
 
 - Adaboost组合算法：[源码链接](https://github.com/csuldw/MachineLearning/tree/master/Adaboost)
 
+- mRMR特征选择方法，[软件使用方法](https://github.com/csuldw/MachineLearning/tree/master/mRMR)
+
 ## Contributor
 
 - 刘帝伟, 中南大学在读硕士，[HOME](http://csuldw.github.io).
