@@ -1,6 +1,6 @@
 ## Adaboost
 
-参考博文：[机器学习算法-Adaboost](http://www.csuldw.com/2015/07/05/2015-07-12-Adaboost/)
+参考博文：[机器学习算法-Adaboost](http://www.csuldw.com/2015/07/05/2015-07-12-ML-algorithm-Adaboost/)
 
 - Python + Numpy
 

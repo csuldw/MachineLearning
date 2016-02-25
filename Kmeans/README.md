@@ -9,7 +9,7 @@
 - run.py：一个测试文件，用于测试./data/test.txt文件
 
 
-参考博文：[机器学习算法-K-means聚类](http://www.csuldw.com/2015/06/03/2015-06-03-K-means/)
+参考博文：[机器学习算法-K-means聚类](http://www.csuldw.com/2015/06/03/2015-06-03-ml-algorithm-K-means/)
 
 使用工具：python + numpy + matplotlib + pandas
 
