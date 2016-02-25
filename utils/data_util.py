@@ -58,7 +58,7 @@ class DataUtils(object):
         """
         将MNIST的二进制文件转换成像素特征数据
         """
-        binfile = open(self._filename, 'rb') #以二进制方式打开
+        binfile = open(self._filename, 'rb') #以二进制方式打开文件
         buf = binfile.read() 
         binfile.close()
         index = 0
@@ -99,12 +99,12 @@ class DataUtils(object):
         根据生成的特征和数字标号，输出png的图像
         """
         m, n = np.shape(arrX)
-        #每张图是28*28=784Byte,这里只显示第一张图
+        #每张图是28*28=784Byte
         for i in range(1):
             img = np.array(arrX[i])
             img = img.reshape(28,28)
             outfile = str(i) + "_" +  str(arrY[i]) + ".png"
             plt.figure()
-            plt.imshow(img, cmap = 'binary')#黑白显示
+            plt.imshow(img, cmap = 'binary') #将图像黑白显示
             plt.savefig(self._outpath + "/" + outfile)
 
