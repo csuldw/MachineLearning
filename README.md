@@ -24,6 +24,7 @@
 
 - 机器学习算法代码使用汇总，[Python & R Codes](http://csuldw.github.io/2015/11/21/2015-11-21-machine-learning-algorithms/)
 
+- PCA主要成分分析, [Python实现源码](https://github.com/csuldw/MachineLearning/tree/master/PCA)
 
 ## Supplementary
 
