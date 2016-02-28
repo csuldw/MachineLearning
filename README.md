@@ -2,7 +2,7 @@
 
 机器学习算法代码及个人总结整理，对于算法实现部分，在相应目录中都包含有源码和数据以及测试实例，内容正在不断完善中！如有错误，望不吝指教。PS:所有代码均符合我们整理出来的这份[编码规范](https://github.com/csuldw/MachineLearning/blob/master/Python-coding-standards.md).
 
-## 内容简介
+## Contents
 
 算法部分目前主要包含如下部分：
 
