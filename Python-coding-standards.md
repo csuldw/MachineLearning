@@ -5,6 +5,11 @@
 ```python
 #!/usr/bin/python
 #-*- coding:utf8 -*- 
+"""
+description
+"""
+import sys
+import os
 ```
 
 ## 常量
