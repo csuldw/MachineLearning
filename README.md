@@ -33,7 +33,7 @@
 
 ## Contributor
 
-- 刘帝伟, 中南大学在读硕士，[HOME](http://csuldw.github.io).
+- 刘帝伟, 中南大学在读硕士，[Homepage](http://csuldw.github.io).
 
 
 ## Contact
