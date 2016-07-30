@@ -26,6 +26,9 @@
 
 - PCA主要成分分析, [Python实现源码](https://github.com/csuldw/MachineLearning/tree/master/PCA)
 
+- spark-demo：使用scala编写的spark实例.
+	- invertedIndex, [Spark 倒排索引源码](https://github.com/csuldw/MachineLearning/tree/master/invertedIndex)
+
 ## Supplementary
 
 - MNIST数据集[加载方法](https://github.com/csuldw/MachineLearning/tree/master/dataset/MNIST).
@@ -33,7 +36,7 @@
 
 ## Contributor
 
-- 刘帝伟, 中南大学在读硕士，[Homepage](http://csuldw.github.io).
+- 刘帝伟, 中南大学在读硕士，[HomePage](http://www.csuldw.com).
 
 
 ## Contact
