@@ -3,7 +3,7 @@
 
 在学习机器学习的时候，首当其冲的就是准备一份通用的数据集，方便与其他的算法进行比较。在这里，我写了一个用于加载MNIST数据集的方法，并将其进行封装，主要用于将MNIST数据集转换成numpy.array()格式的训练数据。直接下面看下面的代码吧！
 
-文章链接:[机器学习数据集-MNIST](http://csuldw.github.io/2016/02/25/2016-02-25-machine-learning-MNIST-dataset/)
+文章链接:[机器学习数据集-MNIST](http://www.csuldw.com/2016/02/25/2016-02-25-machine-learning-MNIST-dataset/)
 
 MNIST数据集原网址：[http://yann.lecun.com/exdb/mnist/](http://yann.lecun.com/exdb/mnist/)
 
