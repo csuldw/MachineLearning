@@ -1,6 +1,6 @@
 ## 最小冗余最大相关(minimal Redundancy Maximal Relevance,mRMR)
 
-mRMR方法是用来做特征选择的，该方法保证了特征间的最小冗余性以及特征和类标签的最大相关性，详细的信息请前往原链接[mRMR](http://penglab.janelia.org/proj/mRMR/)。关于本软件的数学公式推导，可以参考这篇paper，[Pent et al. mRMR.pdf](https://github.com/csuldw/MachineLearning/tree/master/mRMR/Pent et al_mRMR.pdf).
+mRMR方法是用来做特征选择的，该方法保证了特征间的最小冗余性以及特征和类标签的最大相关性，详细的源码请前往原链接[mRMR](http://penglab.janelia.org/proj/mRMR/)，本文主要介绍如何使用此方法。关于本软件的数学公式推导，可以参考这篇paper，[Pent et al. mRMR.pdf](https://github.com/csuldw/MachineLearning/tree/master/mRMR/Pent et al_mRMR.pdf).
 
 在这里，主要介绍如何将该方法运行起来。
 
