@@ -36,7 +36,7 @@
 
 ## Contributor
 
-- 刘帝伟, 中南大学在读硕士，[HomePage](http://www.csuldw.com).
+- 刘帝伟, 中南大学2014级硕士，[HomePage](http://www.csuldw.com).
 
 
 ## Contact
