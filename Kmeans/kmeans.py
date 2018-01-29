@@ -80,7 +80,7 @@ class KMeansClassifier():
                     if distJI < minDist:
                         minDist = distJI
                         minIndex = j
-                if self._clusterAssment[i,0] !=minIndex:
+                if self._clusterAssment[i, 0] != minIndex or self._clusterAssment[i, 1] > minDist**2:
                     clusterChanged = True
                     self._clusterAssment[i,:] = minIndex, minDist**2
             if not clusterChanged:#若所有样本点所属的族都不改变,则已收敛,结束迭代
