@@ -26,6 +26,8 @@
 
 - PCA主要成分分析, [Python实现源码](https://github.com/csuldw/MachineLearning/tree/master/PCA)
 
+- LDA线性判别分析（Fisher判别）,[源码实现](https://github.com/csuldw/MachineLearning/blob/master/LDA/lda.ipynb)
+
 - spark-demo：使用scala编写的spark实例.
 	- invertedIndex, [Spark 倒排索引实例源码](https://github.com/csuldw/MachineLearning/tree/master/spark-demo/invertedIndex)
 
