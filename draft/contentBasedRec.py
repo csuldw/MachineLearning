@@ -30,3 +30,8 @@ weight=tfidf.toarray()#将tf-idf矩阵抽取出来，元素a[i][j]表示j词在i
 from sklearn.metrics.pairwise import cosine_similarity
 cos = cosine_similarity(weight[0:1], weight)
 recommendations = cos[0].argsort()[-4:][::-1]
+
+
+a = list(weight[0:1][0])
+aaa = pd.DataFrame(weight)
+cosine_similarity(np.array([a]), aaa)
