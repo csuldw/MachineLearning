@@ -30,8 +30,8 @@ v = DictVectorizer()
 X_train = v.fit_transform(X_train)
 X_test = v.transform(X_test)
 
-fm = pylibfm.FM(num_factors=100, 
-                num_iter=200, 
+fm = pylibfm.FM(num_factors=1, 
+                num_iter=500, 
                 verbose=True, 
                 task="classification", 
                 initial_learning_rate=0.001, 
