@@ -38,9 +38,15 @@
 
 ## Contributor
 
-- 刘帝伟, 中南大学14级硕士，关注AI、机器学习、深度学习方向，[HomePage](http://www.csuldw.com).
+- 刘帝伟, CSU硕士毕业，关注AI、机器学习、深度学习方向，[HomePage](http://www.csuldw.com).
 
 
 ## Contact
+
+如果有任何疑问，可在我的微信公众号后台留言：
+
+![](http://www.csuldw.com/assets/articleImg/2019/code-main-fun.png)
+
+或是发邮件吧：
 
 - E-mail: csu.ldw@csu.edu.cn
