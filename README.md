@@ -47,6 +47,9 @@
 
 ![](http://www.csuldw.com/assets/articleImg/2019/code-main-fun.png)
 
+<img src="http://www.csuldw.com/assets/articleImg/2019/code-main-fun.png" width="65%" height="50%">
+<div class="caption">Fig 1：推荐系统整体结构.</div>
+
 或是发邮件吧：
 
 - E-mail: csu.ldw@csu.edu.cn
