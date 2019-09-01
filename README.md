@@ -46,9 +46,10 @@
 如果有任何疑问，可在我的微信公众号后台留言：
 
 <!-- ![](http://www.csuldw.com/assets/articleImg/2019/code-main-fun.png) -->
-<center>
+
+<div style="align: center">
 <img src="http://www.csuldw.com/assets/articleImg/2019/code-main-fun.png" width="65%" height="50%">
-</center>
+</div>
 
 或是发邮件吧：
 
