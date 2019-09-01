@@ -48,7 +48,7 @@
 <!-- ![](http://www.csuldw.com/assets/articleImg/2019/code-main-fun.png) -->
 
 <div style="align: center">
-<img src="http://www.csuldw.com/assets/articleImg/2019/code-main-fun.png" width="65%" height="50%">
+<img src="http://www.csuldw.com/assets/articleImg/2019/code-main-fun.png" width="50%" height="50%">
 </div>
 
 或是发邮件吧：
